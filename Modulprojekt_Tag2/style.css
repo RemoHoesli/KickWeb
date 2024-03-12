@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: "Raleway";
+    src: url('Raleway-ExtraBold.ttf');
+}
+:root {
+    --boxColor: #ff7e43;
+    --backgroundColor: #f7ffda;
+    --aniduration: 4s;
+}
+
+body{
+    font-family: "Raleway";
+    margin: 0px;
+}
+
+.container {
+    background-color: var(--backgroundColor);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.b1 {
+    background-color: var(--boxColor);
+    border: 1px solid var(--backgroundColor);
+    width: 50vw;
+    height: 60vh;
+    align-self: flex-start;
+
+    animation-name: updown1;
+    animation-duration: var(--aniduration);
+    animation-iteration-count: infinite;
+}
+.b2 {
+    background-color: var(--boxColor);
+    border: 1px solid var(--backgroundColor);
+    width: 25vw;
+    height: 60vh;
+    align-self: center;
+
+    animation-name: updown2;
+    animation-duration: var(--aniduration);
+    animation-iteration-count: infinite;
+}
+.b3 {
+    background-color: var(--boxColor);
+    border: 1px solid var(--backgroundColor);
+    width: 12.5vw;
+    height: 60vh;
+    align-self: flex-end;
+
+    animation-name: updown3;
+    animation-duration: var(--aniduration);
+    animation-iteration-count: infinite;
+}
+.b4 {
+    background-color: var(--boxColor);
+    border: 1px solid var(--backgroundColor);
+    width: 6.25vw;
+    height: 60vh;
+    align-self: center;
+    margin-bottom: 5vh;
+
+    animation-name: updown4;
+    animation-duration: var(--aniduration);
+    animation-iteration-count: infinite;
+}
+.b5 {
+    background-color: var(--boxColor);
+    border: 1px solid var(--backgroundColor);
+    width: 6.25vw;
+    height: 60vh;
+    align-self: flex-start;
+
+    animation-name: updown5;
+    animation-duration: var(--aniduration);
+    animation-iteration-count: infinite;
+}
+
+@keyframes updown1 {
+    0% {
+        translate: 0px 0px;
+    }
+    50% {
+        translate: 0px 40vh;
+    }
+    100% {
+        translate: 0px 0px;
+    }
+}
+@keyframes updown2 {
+    0% {
+        translate: 0px 0px;
+    }
+    25% {
+        translate: 0px -20vh;
+    }
+    75% {
+        translate: 0px 20vh;
+    }
+    100% {
+        translate: 0px 0px;
+    }
+}
+@keyframes updown3 {
+    0% {
+        translate: 0px 0px;
+    }
+    50% {
+        translate: 0px -40vh;
+    }
+    100% {
+        translate: 0px 0px;
+    }
+}
+@keyframes updown4 {
+    0% {
+        translate: 0px 0px;
+    }
+    25% {
+        translate: 0px 22.5vh;
+    }
+    75% {
+        translate: 0px -17vh;
+    }
+    100% {
+        translate: 0px 0px;
+    }
+}
+@keyframes updown5 {
+    0% {
+        translate: 0px 0px;
+    }
+    50% {
+        translate: 0px 40vh;
+    }
+    100% {
+        translate: 0px 0px;
+    }
+}
+
+
+.namen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    translate: 10vw -55vh;
+}
+
+.nachnamen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    translate: 25vw -65.5vh;
+    font-weight: 800;
+}

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: "Raleway";
+    src: url('Raleway-ExtraBold.ttf');
+}
+:root {
+    --primaryColor: #7ed66c;
+}
+
+body{
+    background-color:rgb(254, 255, 214);
+    font-family: "Raleway";
+}
+
+.updown1 {
+    animation-name: aniupdown1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.updown2 {
+    animation-name: aniupdown2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes aniupdown1 {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(60px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes aniupdown2 {
+    0% {
+        
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(60px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
