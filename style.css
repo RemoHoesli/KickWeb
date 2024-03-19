@@ -29,6 +29,7 @@ body {
     border: 3px solid #00ca5b;
     border-radius: 10px;
     background-color: #00ff9d;
+    transition: 0.1s;
     text-align: center;
     margin: 10px;
     padding: 10px;
@@ -38,4 +39,11 @@ body {
     color: #ffffff;
     font-weight: 700;
     font-size: 20pt;
+    text-decoration: none;
+}
+
+.child:hover {
+    border: 3px solid #00ff9d;
+    background-color: #00e78f;
+    transition: 0.2s;
 }
