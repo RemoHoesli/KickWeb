@@ -77,13 +77,16 @@ body{
 } 
 .b2:hover {
     background-color: var(--boxHigh);
-    transition: 0.2s;
+    transition: 0.1s;
     font-size: 12pt;
 }
 .b3 {
     background-color: var(--boxColor);
     border: 1px solid var(--backgroundColor);
     transition: background-color 0.1s;
+    font-size: 0pt;
+    text-align: center;
+    transition: 0.1s;
     
     grid-column: 5/6;
     grid-row: 4/8;
@@ -94,11 +97,21 @@ body{
 }
 .b3:hover {
     background-color: var(--boxHigh);
+    transition: 0.1s;
+    font-size: 12pt;
 }
 .b4 {
     background-color: var(--boxColor);
     border: 1px solid var(--backgroundColor);
     transition: background-color 0.1s;
+    font-size: 0pt;
+    text-align: center;
+    transition: 0.1s;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding-right: 1.5vw;
+
+    transition: 0.1s;
     
     grid-column: 6/7;
     grid-row: 2/6;
@@ -109,11 +122,19 @@ body{
 }
 .b4:hover {
     background-color: var(--boxHigh);
+    transition: 0.1s;
+    font-size: 12pt;
 }
 .b5 {
     background-color: var(--boxColor);
     border: 1px solid var(--backgroundColor);
     transition: background-color 0.1s;
+    font-size: 0pt;
+    text-align: center;
+    transition: 0.1s;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding-right: 1.5vw;
     
     grid-column: 7/8;
     grid-row: 1/5;
@@ -125,7 +146,8 @@ body{
 
 .b5:hover {
     background-color: var(--boxHigh);
-
+    transition: 0.1s;
+    font-size: 12pt;
 }
 
 .vn {
