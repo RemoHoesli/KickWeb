@@ -5,15 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>responsives Verhalten</title>
 </head>
+<style>
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;
+    font-weight: 500;
+    padding: 2em;
+    margin: 0;
+}
+h6 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 200;
+    padding: 1em;
+    margin: 0;
+    align-self: flex-start;
+}
+
+</style>
+
 <body>
-    
+
+    <h2>Responsives Verhalten</h2>
     <p>
         <img src="https://remohoesli.github.io/KickWeb/Modulprojekt_IdeeResponsive/KIWEB_responsivesSkizze.jpg" alt="" width="1280">
     </p>
-   
-    <video width="1280" autoplay loop>
-        <source src="https://remohoesli.github.io/KickWeb/Modulprojekt_IdeeResponsive/KIWEB_responsivesVerhalten.mp4" type="video/mp4">
-      </video>
+    <h6>Unterscheidung Monitor, Tablet, Smartphone</br>
+        Variante 1.1 (Monitor): Erweiterung der Child Boxes durch :hover</br>
+        Variante 1.2 (Monitor): Veranlassung zum Scrollen, Anzeige Information mit staggered transistions durch :hover</br>
+        Variante 1.3 (Monitor): Veranlassung zum Scrollen, Anzeige Information mit transform: translate durch :hover&nbsp;</br>
+        Variante 2.1 (Touchscreen): Erweiterung der Child Boxes durch timing</br>
+        Variante 2.2 (Touchscreen): Veranlassung zum Scrollen, Anzeige Information mit staggered transistions durch Erreichen einer bestimmten height</br>
+        Variante 2.3 (Touchscreen): Veranlassung zum Scrollen, Anzeige Information mit transform: translate durch Erreichen einer bestimmten height&nbsp;</br>
+    </h6>
+    <p>
+        <video width="1280" autoplay loop>
+            <source src="https://remohoesli.github.io/KickWeb/Modulprojekt_IdeeResponsive/KIWEB_responsivesVerhalten.mp4" type="video/mp4">
+        </video>
+    </p>
+    
 
 </body>
+
 </html>
