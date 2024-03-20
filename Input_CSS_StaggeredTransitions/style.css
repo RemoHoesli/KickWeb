@@ -1,0 +1,65 @@
+body {
+    background-color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h2 {
+    margin-bottom: 2em;
+}
+p {
+    padding-bottom: 1em;
+    padding-left: 1em;
+}
+
+.container {
+    margin: 10px;
+    padding: 20px;
+    background-color: #eeeeee;
+    border-radius: 4px;
+}
+/*Flexbox*/
+.chind {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Als Igrenzig*/
+.fall {
+    width: 80vw;
+    background-color: peru;
+    border: 5px solid rgb(131, 79, 27);
+    margin-top: 30px;
+    padding: 20px;
+}
+/*Das hani inetah wel d Höchi vom .fall vode Liste abhängig isch und die isch chliner als de Dominostei*/
+.beispiel.eins,.beispiel.drei,.beispiel.fünf {
+    margin-bottom: 250px;
+}
+
+/*Schaltfläche fürs Awendigsbispiel*/
+.button {
+    width: 14vw;
+    height: 6rem;
+    transition-duration: 0.2s;
+}
+
+/*Ufbau Liste für Bispiel 1 bis 4*/
+.beispiel li {
+    float:left;
+    margin-right: 60px;
+}
+/*Ufbau Liste für Bispiel 5 und 6*/
+.fünf li, .sechs li {
+    float:left;
+    margin-right: 20px;
+}
+/*Dominostei aber in chli für Bispiel 5 und 6*/
+.dominosteinli {
+    width: 20px;
+    height: 80px;
+    background-color:var(--dominocolor);
+    margin: 10px;
+
+    transition-property: transform;
+    transition-duration: var(--ziit);
+    transform-origin:bottom right;
+}

@@ -1,0 +1,225 @@
+/*Custom Properties, globale Variablen basically*/
+:root {
+    --ziit: 0.5s;                     /*transition-duration der Dominosteinen*/
+    --delay: calc(var(--ziit) / 5);   /*Verzögerung zwischen den Dominosteinen*/
+    --dominocolor: firebrick;       /*Farbe der Dominosteinen*/
+    --bg: 20%;                        /*BackGround farbe der Flächen im Anwendungsbeispiel*/
+    --bc: 10%;                        /*BorderColor der Flächen im Anwendungsbeispiel*/
+    --delaycolor: 0.05s;              /*Verzögerung zwischen den Flächen im Anwendungsbeispiel*/
+}
+
+
+/*Eigenschaften eines Dominosteines sowie Übergangsbedingungen*/
+.dominostei {
+    width: 40px;
+    height: 170px;
+    background-color:var(--dominocolor);
+    margin: 10px;
+
+    transition-property: transform;
+    transition-duration: var(--ziit);
+    transform-origin:bottom right;
+}
+
+
+
+/*(1)*/
+/*Einzelner Dominostein rotieren*/
+.eins .list:hover .dominostei {
+    transform: rotate(90deg);
+}
+
+
+
+/*(2)*/
+/*Dominosteine in einer Reihe rotieren*/
+/*Mittels Liste angeordnet*/
+.zwei .list:hover .dominostei {
+    transform: rotate(70deg);
+}
+/*Mit :nth-child() kann auf ein Child-Element eines Parent-Elements zugegriffen werden*/
+/*.zwei .list:hover li:nth-child(5) .dominostei {
+    transform: rotate(90deg);
+}*/
+
+
+
+/*(3)*/
+/*Verzögerung mit transition-delay:*/
+/*Die einzelnen Steine werden mit li:nth-child(x) aufgerufen, wobei x für die Platzierung in der Liste steht*/
+.drei .list:hover .dominostei {
+    transform: rotate(70deg);
+}
+.drei li:nth-child(1) .dominostei {
+    transition-delay: 0.0s;
+}
+.drei li:nth-child(2) .dominostei {
+    transition-delay: 0.1s;
+}
+.drei li:nth-child(3) .dominostei {
+    transition-delay: 0.2s;
+}
+.drei li:nth-child(4) .dominostei {
+    transition-delay: 0.3s;
+}
+.drei li:nth-child(5) .dominostei {
+    transition-delay: 0.4s;
+}
+.drei .list:hover li:nth-child(5) .dominostei {
+    transform: rotate(90deg) translateX(-3px);
+}
+
+
+
+/*(4)*/
+/*relative Verzögerung je nach transition-duration mit Custom Property und calc()*/
+.vier .list:hover .dominostei {
+    transform: rotate(70deg);
+}
+.vier li:nth-child(1) .dominostei {
+    transition-delay: calc(var(--delay) * 0);
+}
+.vier li:nth-child(2) .dominostei {
+    transition-delay: calc(var(--delay) * 1);
+}
+.vier li:nth-child(3) .dominostei {
+    transition-delay: calc(var(--delay) * 2);
+}
+.vier li:nth-child(4) .dominostei {
+    transition-delay: calc(var(--delay) * 3);
+}
+.vier li:nth-child(5) .dominostei {
+    transition-delay: calc(var(--delay) * 4);
+}
+.vier .list:hover li:nth-child(5) .dominostei {
+    transform: rotate(90deg) translateX(-3px);
+}
+
+
+
+/*(5)*/
+/*Copy&Paste ist cool*/
+
+/*TURN THIS...*/
+.fünf .list:hover .dominosteinli {
+    transform: rotate(70deg);
+}
+.fünf li:nth-child(1) .dominosteinli {
+    transition-delay: calc(var(--delay) * 0);
+}
+.fünf li:nth-child(2) .dominosteinli {
+    transition-delay: calc(var(--delay) * 1);
+}
+.fünf li:nth-child(3) .dominosteinli {
+    transition-delay: calc(var(--delay) * 2);
+}
+.fünf li:nth-child(4) .dominosteinli {
+    transition-delay: calc(var(--delay) * 3);
+}
+.fünf li:nth-child(5) .dominosteinli {
+    transition-delay: calc(var(--delay) * 4);
+}
+.fünf li:nth-child(6) .dominosteinli {
+    transition-delay: calc(var(--delay) * 5);
+}
+.fünf li:nth-child(7) .dominosteinli {
+    transition-delay: calc(var(--delay) * 6);
+}
+.fünf li:nth-child(8) .dominosteinli {
+    transition-delay: calc(var(--delay) * 7);
+}
+.fünf li:nth-child(9) .dominosteinli {
+    transition-delay: calc(var(--delay) * 8);
+}
+.fünf li:nth-child(10) .dominosteinli {
+    transition-delay: calc(var(--delay) * 9);
+}
+.fünf li:nth-child(11) .dominosteinli {
+    transition-delay: calc(var(--delay) * 10);
+}
+.fünf li:nth-child(12) .dominosteinli {
+    transition-delay: calc(var(--delay) * 11);
+}
+.fünf li:nth-child(13) .dominosteinli {
+    transition-delay: calc(var(--delay) * 12);
+}
+.fünf li:nth-child(14) .dominosteinli {
+    transition-delay: calc(var(--delay) * 13);
+}
+.fünf li:nth-child(15) .dominosteinli {
+    transition-delay: calc(var(--delay) * 14);
+}
+.fünf li:nth-child(16) .dominosteinli {
+    transition-delay: calc(var(--delay) * 15);
+}
+.fünf li:nth-child(17) .dominosteinli {
+    transition-delay: calc(var(--delay) * 16);
+}
+.fünf li:nth-child(18) .dominosteinli {
+    transition-delay: calc(var(--delay) * 17);
+}
+.fünf li:nth-child(19) .dominosteinli {
+    transition-delay: calc(var(--delay) * 18);
+}
+.fünf li:nth-child(20) .dominosteinli {
+    transition-delay: calc(var(--delay) * 19);
+}
+
+
+/*(6)*/
+
+/*INTO THIS!*/
+/*der --delay kann auch in der html Datei mit <style> deklariert werden*/
+.sechs .list:hover .dominosteinli {
+    transform: rotate(70deg);
+    transition-delay: var(--delay);
+}
+
+
+/*(7)*/
+/*Anwendungsbeispiel Schaltfläche*/
+/*Anordnung der Child-Elementen mit Flex-Box*/
+.sieben {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+/*Beim :hover werden die Helligkeiten verändert.*/
+/*hier steht bg für background-color und bc steht für border-color*/
+.sieben:hover {
+    --bg: 60%;
+    --bc: 30%;
+    transition-duration: 0.2s;
+}
+
+/*Die Klassen hier sind Child-Elemente, haben verschiedene Farben und Delays*/
+.rot {
+    border: 5px solid hsl(0, 100%, var(--bc));
+    background-color: hsl(0, 100%, var(--bg));
+    transition-delay: calc(var(--delaycolor)*0);
+}
+.gelb {
+    border: 5px solid hsl(50, 100%, var(--bc));
+    background-color: hsl(50, 100%, var(--bg));
+    transition-delay: calc(var(--delaycolor)*1);
+}
+.grün {
+    border: 5px solid hsl(100, 100%, var(--bc));
+    background-color: hsl(100, 100%, var(--bg));
+    transition-delay: calc(var(--delaycolor)*2);
+}
+.blau {
+    border: 5px solid hsl(200, 100%, var(--bc));
+    background-color: hsl(200, 100%, var(--bg));
+    transition-delay: calc(var(--delaycolor)*3);
+}
+.violett {
+    border: 5px solid hsl(300, 100%, var(--bc));
+    background-color: hsl(300, 100%, var(--bg));
+    transition-delay: calc(var(--delaycolor)*4);
+}
+.rot:active,.gelb:active,.grün:active,.blau:active,.violett:active {
+    transform: scale(1.03);
+}

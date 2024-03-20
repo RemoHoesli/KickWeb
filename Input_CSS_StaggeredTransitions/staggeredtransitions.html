@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staggered Transitions</title>
+    <link rel="stylesheet" href="staggeredtransitions.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Staggered Transitions</h1>
+        <div class="chind">
+
+
+            <div class="fall">
+                <h2>Einfacher Übergang</h2>
+                <div class="beispiel eins">
+                    (1) Einzelner Dominostein rotieren</br>Von Start zu Ende, simple!
+                    <ul class="list" style="list-style-type: none;">
+                        <li><div class="dominostei"></div></li>
+                    </ul>
+                </div>
+                <div class="beispiel zwei">
+                    (2) Dominosteine in einer Reihe rotieren</br>
+                    Die Steine sind Child-Elemente eines Parents (in diesem Beispiel hier eine Liste) und werden gleichzeitig rotiert. 
+                    <ul class="list" style="list-style-type: none;">
+                        <li><div class="dominostei"></div>Child 1</li>
+                        <li><div class="dominostei"></div>Child 2</li>
+                        <li><div class="dominostei"></div>Child 3</li>
+                        <li><div class="dominostei"></div>Child 4</li>
+                        <li><div class="dominostei"></div>Child 5</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="fall">
+                <h2>Gestaffelter Übergang</h2>
+                <div class="beispiel drei">
+                    (3) Verzögerung mit transition-delay:</br>
+                    Im Grunde passiert dasselbe wie vorher nur mit einer 0.1s Verzögerung zwischen den jeweiligen Steinen. 
+                    Auf die einzelnen Steinen in der Liste (Parent-Element) wird mittels :nth-child() referiert.
+                    <ul class="list" style="list-style-type: none;">
+                        <li><div class="dominostei"></div>Child 1</li>
+                        <li><div class="dominostei"></div>Child 2</li>
+                        <li><div class="dominostei"></div>Child 3</li>
+                        <li><div class="dominostei"></div>Child 4</li>
+                        <li><div class="dominostei"></div>Child 5</li>
+                    </ul>
+                </div>
+                <div class="beispiel vier">
+                    (4) Verzögerung mit Custom Property</br>
+                    Ändert sich die Übergangsdauer so stimmt die Abfolge zeitlich nicht mehr. 
+                    Mit calc() kann das passende Verhältnis zwischen Übergangsdauer und Verzögerung berechnet werden.
+                    <ul class="list" style="list-style-type: none;">
+                        <li><div class="dominostei"></div></li>
+                        <li><div class="dominostei"></div></li>
+                        <li><div class="dominostei"></div></li>
+                        <li><div class="dominostei"></div></li>
+                        <li><div class="dominostei"></div></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            <div class="fall">
+                <h2>woah</h2>
+                <div class="beispiel fünf">
+                    (5) Copy&Paste ist cool</br>
+                    Wenn man kreativ ist, kann eine lange Transitionkette gebaut werden. 
+                    Der Code im CSS wird dementsprechen auch lang.
+                    <ul class="list" style="list-style-type: none;">
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                        <li><div class="dominosteinli"></div></li>
+                    </ul>
+                </div>
+                <div class="beispiel sechs">
+                    (6) Wenig Zeilen im Code ist auch cool</br>
+                    Der einzige Unterschied zwischen den Child-Elementen sind die Delays, die sich laufend summieren. 
+                    Diese Delays können mit dem style-Tag in HTML berechnet werden. 
+                    <ul class="list" style="list-style-type: none;">
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*0);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*1);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*2);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*3);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*4);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*5);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*6);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*7);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*8);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*9);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*10);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*11);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*12);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*13);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*14);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*15);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*16);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*17);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*18);"></div></li>
+                        <li><div class="dominosteinli" style="--delay: calc(var(--ziit)/5*19);"></div></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="fall">
+                <h2>Anwendungsbeispiel</h2>
+                <div class="beispiel sieben">
+                    <div class="button rot" id="changeToRed"></div>
+                    <div class="button gelb" id="changeToYellow"></div>
+                    <div class="button grün" id="changeToGreen"></div>
+                    <div class="button blau" id="changeToBlue"></div>
+                    <div class="button violett" id="changeToViolet"></div>
+                    <script src="script.js"></script>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    
+</body>
+</html>
