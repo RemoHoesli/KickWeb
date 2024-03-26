@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-@font-face {
-    font-family: "Raleway";
-    src: url('Raleway-ExtraBold.ttf');
-}
 :root {
     --boxColor: #ff7e43;
     --boxHigh: #ff9361;
@@ -14,6 +10,7 @@
 body{
     font-family: "Raleway";
     margin: 0px;
+    height: 2000px;
 }
 
 .container {
@@ -302,14 +299,7 @@ body{
 
 }
 
-.solisten {
-    background-color: var(--backgroundColor);
-
-    min-height: 550px;
-    height: 100vh;
-    min-width: 500px;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 10% 15% 25% 25% 12.5% 6.25% 6.25%;
-    grid-template-rows: 17% 3% 20% 20% 17% 3% 20%;
+.sticky {
+    position: fixed;
+    animation-play-state: paused;
 }
