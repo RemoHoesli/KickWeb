@@ -301,5 +301,6 @@ body{
 
 .sticky {
     position: fixed;
+    top: 0;
     animation-play-state: paused;
 }

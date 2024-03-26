@@ -1,13 +1,15 @@
-window.onscroll = function () {"klebrig"};
+window.onload = function () {
+    document.addEventListener("scroll", miniFunktion);       
+}
 
-var box = document.getElementById("box");
-var sticky = box.offsetTop;
+const wort = document.getElementById("wort");
+const offset = wort.offsetTop;
 
-function klebrig() {
-    if (window.scrollY >= sticky) {
-      box.classList.add("sticky")
+function miniFunktion() {
+    if (window.scrollY >= offset) {
+      wort.classList.add("sticky")
     } else {
-      box.classList.remove("sticky");
+      wort.classList.remove("sticky");
     }
 }
 
