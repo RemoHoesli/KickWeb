@@ -1,6 +1,6 @@
 /*Custom Properties, globale Variablen basically*/
 :root {
-    --ziit: 0.5s;                     /*transition-duration der Dominosteinen*/
+    --ziit: 0.3s;                     /*transition-duration der Dominosteinen*/
     --delay: calc(var(--ziit) / 5);   /*Verzögerung zwischen den Dominosteinen*/
     --dominocolor: firebrick;       /*Farbe der Dominosteinen*/
     --bg: 20%;                        /*BackGround farbe der Flächen im Anwendungsbeispiel*/
@@ -38,9 +38,9 @@
     transform: rotate(70deg);
 }
 /*Mit :nth-child() kann auf ein Child-Element eines Parent-Elements zugegriffen werden*/
-/*.zwei .list:hover li:nth-child(5) .dominostei {
+.zwei .list:hover li:nth-child(5) .dominostei {
     transform: rotate(90deg);
-}*/
+}
 
 
 
@@ -189,8 +189,8 @@
 /*Beim :hover werden die Helligkeiten verändert.*/
 /*hier steht bg für background-color und bc steht für border-color*/
 .sieben:hover {
-    --bg: 60%;
-    --bc: 30%;
+    --bg: 90%;
+    --bc: 0%;
     transition-duration: 0.2s;
 }
 
